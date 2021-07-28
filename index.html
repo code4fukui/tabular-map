@@ -1,0 +1,53 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>TabularMaps - tabular-map tag</title>
+</head><body>
+
+<h1>TabularMaps - tabular-map tag</h1>
+
+<h2>タグのみ</h2>
+<script type="module" src="./tabular-map.js"></script>
+<tabular-map></tabular-map>
+<textarea style="width:calc(100% - 1em);margin:.5em">&lt;script type="module" src="./tabular-map.js"&gt;&lt;/script&gt;
+&lt;tabular-map&gt;&lt;/tabular-map&gt;
+</textarea>
+
+<h2>カラム地図 カスタマイズ</h2>
+
+<div id=grayborder></div>
+<script type="module">
+import { TabularMap } from "./tabular-map.js";
+import { style } from "https://js.sabae.cc/css.js";
+
+const tmap = new TabularMap();
+grayborder.appendChild(tmap);
+tmap.style.width = "80vw";
+style({
+  "#grayborder .tabularmapitem": {
+    border: "4px solid gray",
+  }
+});
+tmap.querySelector(".日本").textContent = "カスタマイズ";
+tmap.querySelector(".福井 .content").textContent = "鯖江市はココ！";
+tmap.querySelector(".東京 .name").style.color = "blue";
+</script>
+
+<textarea style="width:calc(100% - 1em);margin:.5em;height:25em">&lt;div id=grayborder&gt;&lt;/div&gt;
+&lt;script type="module"&gt;
+import { TabularMap } from "./tabular-map.js";
+import { style } from "https://js.sabae.cc/css.js";
+
+const tmap = new TabularMap();
+grayborder.appendChild(tmap);
+tmap.style.width = "80vw";
+style({
+  "#grayborder .tabularmapitem": {
+    border: "4px solid gray",
+  }
+});
+tmap.querySelector(".日本").textContent = "カスタマイズ";
+tmap.querySelector(".福井 .content").textContent = "鯖江市はココ！";
+tmap.querySelector(".東京 .name").style.color = "blue";
+&lt;/script&gt;
+</textarea>
+  
+</body></html>
