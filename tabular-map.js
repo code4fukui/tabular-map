@@ -23,12 +23,14 @@ class TabularMap extends HTMLElement {
         display: "grid",
         "grid-template-rows": "1fr ".repeat(japan[0].length),
         "grid-template-columns": "1fr ".repeat(japan[0].length),
+        "font-size": "2vw",
       },
       ".tabularmap .tabularmapitem": {
         border: "1px solid black",
-        "border-radius": "5px",
+        "border-radius": ".3vw",
         "text-align": "center",
-        margin: "2px",
+        margin: ".2vw",
+        padding: ".2vw",
       },
     });
     for (const jr of japan) {
